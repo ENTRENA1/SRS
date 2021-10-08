@@ -34,6 +34,11 @@ p1 = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 g1 = Crypto.Util.number.getPrime(bits, randfunc=get_random_bytes)
 a1 = //numero menor que phi
 
+
+//Estos ataques son muy difíciles de detectar sino casi imposibles, el atacante puede cambiar
+información de los mensajes, no solo robarla. Sólo se pueden prevenir, por ejemplo utilizando 
+claves públicas para el intercambio de la clave simétrica o métodos de autentificación.
+
 //Atacante calcula A1 para enviarlo a Bob
 A1 = pow(g1, a1, p1)
 print('A1 = ' + str(A1))
